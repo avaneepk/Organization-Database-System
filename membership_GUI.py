@@ -1,16 +1,14 @@
 from tkinter import *
-import psycopg2
+from Server import *
+
+
 
 def membershipopen():
     membershipTK = Tk()
     membershipTK.title = "membership"
     membershipTK.geometry("500x650")
     
-    conn = psycopg2.connect(    #need to add your own connection here
-    host="localhost",
-    database="aether",
-    user="postgres",
-    password="avaneep")
+    conn=connectSql()
     c = conn.cursor()
 
     def submit():

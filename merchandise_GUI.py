@@ -1,17 +1,12 @@
 from tkinter import *
-import psycopg2
+from Server import *
 
 def merchanidseopen():
     merchandiseTK = Tk()
     merchandiseTK.title = "merchandise"
     merchandiseTK.geometry("500x650")
     
-    conn = psycopg2.connect(    #need to add your own connection here
-    host="localhost",
-    database="aether",
-    user="postgres",
-    password="avaneep")
-    c = conn.cursor()
+    conn = connectSql()
 
 
     def submit():

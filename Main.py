@@ -3,17 +3,18 @@ from boardmembers_GUI import *
 from sponsorship_GUI import *
 from merchandise_GUI import *
 from tkinter import *
-import psycopg2
+from Server import *
+
+#import psycopg2
+
 
 root = Tk()
 root.title = "student"
 root.geometry("500x650")
 
-conn = psycopg2.connect(    #need to add your own connection here
-    host="localhost",
-    database="aether",
-    user="postgres",
-    password="avaneep")
+conn = connectSql()
+
+
 c = conn.cursor()
 
 

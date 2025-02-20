@@ -1,6 +1,7 @@
 from tkinter import *
-import psycopg2
+from Server import *
 
+conn=connectSql()
 def boardmembersopen():
     boardTK = Tk()
     boardTK.title = "board"
